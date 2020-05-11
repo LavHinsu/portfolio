@@ -18,6 +18,7 @@ const NavbarComponent = (props) => {
                     <Nav.Link style={{ color: "black", fontSize: "large", fontFamily: 'Lato' }} href="/Projects">Projects</Nav.Link>
                     <Nav.Link style={{ color: "black", fontSize: "large", fontFamily: 'Lato' }} href="/About">About Me</Nav.Link>
                     <Nav.Link style={{ color: "black", fontSize: "large", fontFamily: 'Lato' }} href="/Contact">Contact</Nav.Link>
+                    <Nav.Link style={{ color: "black", fontSize: "large", fontFamily: 'Lato' }} href="https://drive.google.com/file/d/18iUxWSAo3jVEVmrmJhB-pcGrYdIXVofd/view?usp=sharing">Resume</Nav.Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
