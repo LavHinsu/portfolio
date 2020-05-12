@@ -5,7 +5,7 @@ import { Navbar, Nav, } from 'react-bootstrap'
 const NavbarComponent = (props) => {
     return (
 
-        <Navbar bg="light" expand="lg" style={{color:"blue"}} navbar-default="true" sticky="top">
+        <Navbar bg="light" expand="lg" style={{color:"blue"}} navbar-default sticky="top">
             <Navbar.Brand style={{ fontSize: "xx-large", fontFamily: 'lato' }} href="/">Lav Hinsu</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
