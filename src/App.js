@@ -16,7 +16,6 @@ function App() {
          <Route exact path ={process.env.PUBLIC_URL + "/About"} component={About}/>
        </Route>
      </Switch>
-
    </Router>
   );
 }
