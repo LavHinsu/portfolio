@@ -18,10 +18,10 @@ const CenterComponent = (props) => {
             <div class="jumbotron bg-transparent mx-auto" fluid>
                 <div class="row">
                     <div class="col align-self-center" style={{ fontSize: "4.5rem",fontFamily:'Playfair Display' }}>
-                        {"Yup, I'm Lav, & I'm a "}
+                        {"I'm Lav,& I'm a"}
                         <Typewriter
                             options={{
-                                strings: ['Front-End ', 'Back-End ', 'Full-Stack ', 'Mobile '],
+                                strings: ['Front-End', 'Back-End', 'Full-Stack', 'Mobile'],
                                 autoStart: true,
                                 loop: true,
                             }}

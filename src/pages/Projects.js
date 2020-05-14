@@ -1,4 +1,4 @@
-import React, {  useEffect } from 'react';
+import React, { useEffect } from 'react';
 import NavbarComponent from '../components/NavbarComponent'
 import { useDispatch, useSelector } from "react-redux";
 import axios from 'axios';
@@ -6,9 +6,8 @@ import axios from 'axios';
 const Project = (props) => {
     var read_token = "4dc1ad1eb2d5ed95b4ca5aa7871d17f1b1cad197"
     //  don't bother trying anything with this token, it has no permissions.
-    //  i add it here because of githubs 30 requests/day rate limit. with this you can go nuts
+    //  i add it here because of githubs 30 requests/day rate limit & with this you can go nuts
     //  on the refresh button
-
 
 
     const content = useSelector(state => state);
@@ -22,20 +21,16 @@ const Project = (props) => {
                     Authorization: 'Bearer ' + read_token
                 }
             }).then(res => dispatch({
-                type:"FETCH_DATA",
-                data:res.data
+                type: "FETCH_DATA",
+                data: res.data
             }));
         }
 
     };
-
-
     useEffect(() => {
         dispatch(fetchData());
         // eslint-disable-next-line react-hooks/exhaustive-deps  
     }, []);
-
-
 
     function getPortRepos() {
         var portRepos = []
@@ -59,7 +54,10 @@ const Project = (props) => {
             <div style={{ fontSize: "large", color: "black" }}>
                 <NavbarComponent />
             </div>
-        </div>
+            <div>
+
+            </div>
+        </div >
     )
 }
 export default Project
