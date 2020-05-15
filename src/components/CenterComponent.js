@@ -11,7 +11,7 @@ const CenterComponent = (props) => {
     }
 
     return (
-        <div style={{color:"white"}}>
+        <div style={{color:"white",left:"40vw"}}>
             <style>
                 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap');
             </style>

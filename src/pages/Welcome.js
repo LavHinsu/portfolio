@@ -13,7 +13,7 @@ const Welcome = (props) => {
             background:`url(${Background})`,
             backgroundRepeat:"no-repeat" ,
             backgroundSize:"cover",
-          
+            
             }} >
             <CenterComponent />
         </div>
