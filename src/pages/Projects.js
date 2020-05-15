@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
-// import NavbarComponent from '../components/NavbarComponent'
+
 import { useDispatch, useSelector } from "react-redux";
 import axios from 'axios';
-import { CardColumns, Card, Badge } from 'react-bootstrap';
-
+import CardComponent from '../components/CardComponent'
+import { CardColumns } from 'react-bootstrap';
 const Project = (props) => {
     var read_token = "4dc1ad1eb2d5ed95b4ca5aa7871d17f1b1cad197"
     //  don't bother trying anything with this token, it has no permissions.
@@ -49,11 +49,11 @@ const Project = (props) => {
         console.log(portRepos)
         return portRepos
     }
-    
+
     var port_repos = getPortRepos()
     console.log(port_repos)
     var name = content.data.name
-    var me = new GhPolyglot("Lav-Hinsu/adbscreencast",read_token);
+    var me = new GhPolyglot("Lav-Hinsu/adbscreencast", read_token);
     me.repoStats(function (err, stats) {
         console.log(err || stats);
     });
@@ -63,102 +63,12 @@ const Project = (props) => {
         <div>
             <div className="mx-5 mt-3">
                 <CardColumns>
-                    <Card className="text-left">
-                        <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
-                            <Card.Subtitle className="mb-2 text-muted">
-                                <Badge pill variant="primary">
-                                    Primary
-                                </Badge>{' '}</Card.Subtitle>
-                            <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
-                             </Card.Text>
-                            <footer className="footer-right">
-                                <Card.Link href="#">View on Github</Card.Link>
-                            </footer>
-                        </Card.Body>
-                    </Card>
-                    <Card className="text-left">
-                        <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
-                            <Card.Subtitle className="mb-2 text-muted">
-                                <Badge pill variant="primary">
-                                    Primary
-                                </Badge>{' '}</Card.Subtitle>
-                            <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
-                             </Card.Text>
-                            <footer className="footer-right">
-                                <Card.Link href="#">View on Github</Card.Link>
-                            </footer>
-                        </Card.Body>
-                    </Card>
-                    <Card className="text-left">
-                        <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
-                            <Card.Subtitle className="mb-2 text-muted">
-                                <Badge pill variant="primary">
-                                    Primary
-                                </Badge>{' '}</Card.Subtitle>
-                            <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
-                             </Card.Text>
-                            <footer className="footer-right">
-                                <Card.Link href="#">View on Github</Card.Link>
-                            </footer>
-                        </Card.Body>
-                    </Card>
-                    <Card className="text-left">
-                        <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
-                            <Card.Subtitle className="mb-2 text-muted">
-                                <Badge pill variant="primary">
-                                    Primary
-                                </Badge>{' '}</Card.Subtitle>
-                            <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
-                             </Card.Text>
-                            <footer className="footer-right">
-                                <Card.Link href="#">View on Github</Card.Link>
-                            </footer>
-                        </Card.Body>
-                    </Card>
-                    <Card className="text-left">
-                        <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
-                            <Card.Subtitle className="mb-2 text-muted">
-                                <Badge pill variant="primary">
-                                    Primary
-                                </Badge>{' '}</Card.Subtitle>
-                            <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
-                             </Card.Text>
-                            <footer className="footer-right">
-                                <Card.Link href="#">View on Github</Card.Link>
-                            </footer>
-                        </Card.Body>
-                    </Card>
-                    <Card className="text-left">
-                        <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
-                            <Card.Subtitle className="mb-2 text-muted">
-                                <Badge pill variant="primary">
-                                    Primary
-                                </Badge>{' '}</Card.Subtitle>
-                            <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
-                             </Card.Text>
-                            <footer className="footer-right">
-                                <Card.Link href="#">View on Github</Card.Link>
-                            </footer>
-                        </Card.Body>
-                    </Card>
+                    <CardComponent />
+                    <CardComponent />
+                    <CardComponent />
+                    <CardComponent />
+                    <CardComponent />
+                    <CardComponent />
                 </CardColumns>
             </div>
         </div >

@@ -21,7 +21,7 @@ const CenterComponent = (props) => {
                         {"I'm Lav,& I'm a"}
                         <Typewriter
                             options={{
-                                strings: ['Front-End', 'Back-End', 'Full-Stack', 'Mobile'],
+                                strings: ['Front-End', 'Back-End', 'Full-Stack', 'Flutter'],
                                 autoStart: true,
                                 loop: true,
                             }}
