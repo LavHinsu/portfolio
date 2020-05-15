@@ -11,6 +11,8 @@ const Project = (props) => {
     //  on the refresh button
 
 
+    var GhPolyglot = require("gh-polyglot");
+
     const content = useSelector(state => state);
     const dispatch = useDispatch();
 
@@ -47,29 +49,20 @@ const Project = (props) => {
         console.log(portRepos)
         return portRepos
     }
+    
     var port_repos = getPortRepos()
     console.log(port_repos)
+    var name = content.data.name
+    var me = new GhPolyglot("Lav-Hinsu/adbscreencast",read_token);
+    me.repoStats(function (err, stats) {
+        console.log(err || stats);
+    });
+
 
     return (
         <div>
             <div className="mx-5 mt-3">
                 <CardColumns>
-                    <Card className="text-left">
-                        <Card.Body>
-                            <Card.Title>Card Title</Card.Title>
-                            <Card.Subtitle className="mb-2 text-muted">
-                                <Badge pill variant="primary">
-                                    Primary
-                                </Badge>{' '}</Card.Subtitle>
-                            <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk of
-                                the card's content.
-                             </Card.Text>
-                            <footer className="footer-right">
-                                <Card.Link href="#">View on Github</Card.Link>
-                            </footer>
-                        </Card.Body>
-                    </Card>
                     <Card className="text-left">
                         <Card.Body>
                             <Card.Title>Card Title</Card.Title>

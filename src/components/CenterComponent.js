@@ -36,7 +36,7 @@ const CenterComponent = (props) => {
                 style = {{color:"White",marginTop:"2vh", fontFamily:"Playfair Display"}}
                 onClick= {mail}
                 >
-                    Get In Touch
+                    Email Me
                 </Button>
             </div>
         </div>
