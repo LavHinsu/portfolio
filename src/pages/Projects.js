@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import NavbarComponent from '../components/NavbarComponent'
+// import NavbarComponent from '../components/NavbarComponent'
 import { useDispatch, useSelector } from "react-redux";
 import axios from 'axios';
 
@@ -51,9 +51,6 @@ const Project = (props) => {
 
     return (
         <div>
-            <div style={{ fontSize: "large", color: "black" }}>
-                <NavbarComponent />
-            </div>
             <div>
 
             </div>
