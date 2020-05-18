@@ -1,5 +1,5 @@
 import React from 'react';
-import { CardColumns, Card, Badge } from 'react-bootstrap';
+import {  Card, Badge } from 'react-bootstrap';
 import { BoxArrowUpRight } from 'react-bootstrap-icons';
 const CardComponent = (props) => {
 
@@ -7,22 +7,25 @@ const CardComponent = (props) => {
     var url = props.url
     var description = props.description
     var technology = props.technology
+
+    description = description.replace("(portfolio)", " ")
+
     return (
         <div >
 
-            <Card className="text-left">
+            <Card className="text-left border border-dark" >
                 <Card.Body>
-                    <Card.Title>Repo Name</Card.Title>
+                    <Card.Title>{name}</Card.Title>
                     <Card.Subtitle className="mb-2 text-muted">
                         <Badge pill variant="primary">
-                            technology
+                            {technology}
                                 </Badge>{' '}</Card.Subtitle>
                     <Card.Text>
-                        Description of the repo. can be as long as it needs to be
+                        {description}
                              </Card.Text>
                     <footer className="footer-right">
-                        <Card.Link href="#">
-                            View on Github
+                        <Card.Link href={url} target="_blank">
+                            View On Github
                             <BoxArrowUpRight height="2em"/>
                         </Card.Link>
 

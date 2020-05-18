@@ -33,10 +33,10 @@ const About = (props) => {
     console.log(data)
     var avatar_url = data.avatar_url
     var name = data.name
-    var location = data.location
-    var html_url = data.html_url
-    var email = data.email
-    var public_repos = data.public_repos
+    // var location = data.location
+    // var html_url = data.html_url
+    // var email = data.email
+    // var public_repos = data.public_repos
     return (
         <div>
             <div>
