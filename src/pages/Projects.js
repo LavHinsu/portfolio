@@ -33,24 +33,18 @@ function getPortRepos() {
     var portRepos = []
     for (var i = 0; i < content.data.length; i++) {
         var obj = content.data[i];
-        // console.log(obj.description)
+        
         if (obj.description != null) {
             if (obj.description.includes("(portfolio)")) {
                 portRepos.push(obj)
             }
         }
     }
-    console.log(portRepos)
+
     return portRepos
 }
 
 var port_repos = getPortRepos()
-
-port_repos.forEach(element => {
-    console.log(element.name + ": " + element.language)
-});
-
-console.log(port_repos)
 
 return (
     <div>
