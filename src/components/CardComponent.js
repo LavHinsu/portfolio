@@ -2,7 +2,6 @@ import React from 'react';
 import {  Card, Badge } from 'react-bootstrap';
 import { BoxArrowUpRight } from 'react-bootstrap-icons';
 const CardComponent = (props) => {
-
     var name = props.name
     var url = props.url
     var description = props.description

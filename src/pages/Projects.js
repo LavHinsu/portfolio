@@ -55,6 +55,7 @@ return (
 
                 {port_repos.map((item) =>
                     <CardComponent
+                        key={item["id"]}
                         name={item["name"]}
                         url={item["html_url"]}
                         description={item["description"]}
