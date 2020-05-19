@@ -1,5 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+### built using github-API and cra. 
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -15,54 +18,47 @@ You will also see any lint errors in the console.
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+.
 
 ### `npm run build`
 
 Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### `serve -s build`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+serves app locally for production testing
 
-### `npm run eject`
+### `npm -i -g netlify-cli`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+installs netlify cli
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `netlify deploy`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+deploys a draft version of the app to netlify.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+(note: you will have to make a redirect rule to ./build folder (or the folder you want to specify to netlify) because of how react-router-dom works)
 
-## Learn More
+### `netlify deploy --prod`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+deploys a production version of the app to netlify
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Can i copy this?
 
-### Code Splitting
+sure. just fork it and change relevant info. there's a github token you should change. 
+make sure the token you create doesn't have any permission. you don't need any permissions, 
+you just need it to increase your github api rate limit.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### How do i filter for repos i want to showcase in the profile? 
 
-### Analyzing the Bundle Size
+add (portfolio) in the description of the repo. only those repos will be shown in the app.
+i do this because i have tons of forks i do for easy access and from different organizations
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+### Why do some repos don't have language data? 
 
-### Making a Progressive Web App
+because github api doesn't show language data for forked repos, even if you were the author.
+you could use octokit for this if you absolutely want to show data.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+### is this responsive? 
 
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+i tried my best to make it as responsive as possible, however some devices may still show some wierd stuff. open a issue with the device name, or a pull request.
