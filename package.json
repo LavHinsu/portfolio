@@ -23,7 +23,7 @@
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "resolve-url-loader": "^3.1.1",
-    "typescript": "^3.9.2",
+    "typescript": "^3.9.3",
     "typewriter-effect": "^2.13.1"
   },
   "scripts": {
