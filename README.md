@@ -2,6 +2,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 
 ### built using github-API and cra. 
+live version here : https://lav-hinsu.netlify.app/
+[![Netlify Status](https://api.netlify.com/api/v1/badges/db52f644-46b9-4d6e-bc35-d508c5234e0c/deploy-status)](https://app.netlify.com/sites/lav-hinsu/deploys)
 
 ## Available Scripts
 
