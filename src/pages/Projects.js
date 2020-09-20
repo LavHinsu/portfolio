@@ -13,7 +13,7 @@ const Project = (props) => {
     function fetchData() {
         return dispatch => {
             axios({
-                url: 'https://api.github.com/users/Lav-Hinsu/repos',
+                url: 'https://api.github.com/users/LavHinsu/repos',
                 headers: {
                     Authorization: 'Bearer ' + read_token
                 }
