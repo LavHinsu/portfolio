@@ -69,7 +69,7 @@ function MyVerticallyCenteredModal(props) {
                 </Card.Link>
                 <p />
                 <span>Github : Github.com/Lav-Hinsu </span>
-                <Card.Link href="http://github.com/Lav-Hinsu" target="_blank">
+                <Card.Link href="http://github.com/LavHinsu" target="_blank">
                     <BoxArrowUpRight height="2em" />
                 </Card.Link>
                 <p />
