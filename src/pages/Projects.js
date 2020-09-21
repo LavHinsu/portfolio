@@ -1,72 +1,73 @@
-import React, { useEffect } from 'react';
-
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import axios from 'axios';
-import CardComponent from '../components/CardComponent'
-import { CardColumns } from 'react-bootstrap';
+import axios from "axios";
+import CardComponent from "../components/CardComponent";
+import { CardColumns, ProgressBar } from "react-bootstrap";
+
 const Project = (props) => {
-    var read_token = "4dc1ad1eb2d5ed95b4ca5aa7871d17f1b1cad197"
+  var read_token = "4dc1ad1eb2d5ed95b4ca5aa7871d17f1b1cad197";
+  var [loadingdata, setLoadingData] = useState(true);
+  const content = useSelector((state) => state);
+  const dispatch = useDispatch();
 
-    const content = useSelector(state => state);
-    const dispatch = useDispatch();
-
-    function fetchData() {
-        return dispatch => {
-            axios({
-                url: 'https://api.github.com/users/LavHinsu/repos',
-                headers: {
-                    Authorization: 'Bearer ' + read_token
-                }
-            }).then(res => dispatch({
-                type: "FETCH_DATA",
-                data: res.data
-            }));
-        }
-
+  function fetchData() {
+    return (dispatch) => {
+      axios({
+        url: "https://api.github.com/users/LavHinsu/repos",
+        headers: {
+          Authorization: "Bearer " + read_token,
+        },
+      })
+        .then((res) =>
+          dispatch({
+            type: "FETCH_DATA",
+            data: res.data,
+          })
+        )
+        .then(() => {
+          setLoadingData(false);
+        });
     };
-    useEffect(() => {
-        dispatch(fetchData())
-        // eslint-disable-next-line react-hooks/exhaustive-deps  
-    }, []);
+  }
+  useEffect(() => {
+    dispatch(fetchData());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-function getPortRepos() {
-    var portRepos = []
+  function getPortRepos() {
+    var portRepos = [];
     for (var i = 0; i < content.data.length; i++) {
-        var obj = content.data[i];
-        
-        if (obj.description != null) {
-            if (obj.description.includes("(portfolio)")) {
-                portRepos.push(obj)
-            }
+      var obj = content.data[i];
+
+      if (obj.description != null) {
+        if (obj.description.includes("(portfolio)")) {
+          portRepos.push(obj);
         }
+      }
     }
+    return portRepos;
+  }
 
-    return portRepos
-}
+  var port_repos = getPortRepos();
 
-var port_repos = getPortRepos()
-
-return (
+  return (
     <div>
-
-        <div className="mx-5 mt-4 ">
-            <hr></hr>
-            <CardColumns>
-
-                {port_repos.map((item) =>
-                    <CardComponent
-                        key={item["id"]}
-                        name={item["name"]}
-                        url={item["html_url"]}
-                        description={item["description"]}
-                        technology={item["language"]}
-                    />
-
-                )}
-
-            </CardColumns>
-        </div>
-    </div >
-)
-}
-export default Project
+      <div className="mx-5 mt-4 ">
+        {loadingdata && <ProgressBar stripped="true" animated="true" now={100} />}
+        <hr></hr>
+        <CardColumns>
+          {port_repos.map((item) => (
+            <CardComponent
+              key={item["id"]}
+              name={item["name"]}
+              url={item["html_url"]}
+              description={item["description"]}
+              technology={item["language"]}
+            />
+          ))}
+        </CardColumns>
+      </div>
+    </div>
+  );
+};
+export default Project;
