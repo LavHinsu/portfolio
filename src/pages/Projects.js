@@ -5,7 +5,7 @@ import CardComponent from "../components/CardComponent";
 import { CardColumns, ProgressBar } from "react-bootstrap";
 
 const Project = (props) => {
-  var read_token = "4dc1ad1eb2d5ed95b4ca5aa7871d17f1b1cad197";
+  var read_token = "5a55435de68bfae82052d5ac30f2be0c2a04ec6f";
   var [loadingdata, setLoadingData] = useState(true);
   const content = useSelector((state) => state);
   const dispatch = useDispatch();
@@ -40,7 +40,7 @@ const Project = (props) => {
       var obj = content.data[i];
 
       if (obj.description != null) {
-        if (obj.description.includes("(portfolio)")) {
+        if (obj.description.includes('(portfolio)')) {
           portRepos.push(obj);
         }
       }
@@ -49,11 +49,12 @@ const Project = (props) => {
   }
 
   var port_repos = getPortRepos();
-
   return (
     <div>
       <div className="mx-5 mt-4 ">
-        {loadingdata && <ProgressBar stripped="true" animated="true" now={100} />}
+        {loadingdata && (
+          <ProgressBar stripped="true" animated="true" now={100} />
+        )}
         <hr></hr>
         <CardColumns>
           {port_repos.map((item) => (
