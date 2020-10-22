@@ -24,7 +24,7 @@ const NavbarComponent = (props) => {
                     <Nav>
                         <Nav.Link style={{ color: "black", fontSize: "large", fontFamily: 'Lato' }} href="/projects">Projects</Nav.Link>
                         <Nav.Link style={{ color: "black", fontSize: "large", fontFamily: 'Lato' }} href="" onClick={() => setModalShow(true)}>Contact</Nav.Link>
-                        <Nav.Link style={{ color: "black", fontSize: "large", fontFamily: 'Lato' }} href="https://drive.google.com/file/d/18iUxWSAo3jVEVmrmJhB-pcGrYdIXVofd/view?usp=sharing" target="_blank" >Resume</Nav.Link>
+                        <Nav.Link style={{ color: "black", fontSize: "large", fontFamily: 'Lato' }} href="https://drive.google.com/file/d/1Suk7JooKL_jvRHO1Qba4w90MPI9pI46f/view?usp=sharing" target="_blank" >Resume</Nav.Link>
                         <Nav.Link style={{ color: "black", fontSize: "large", fontFamily: 'Lato' }} href="https://criodo.github.io/Crio-Launch-Feb-2020-hinsulav105/" target="_blank" >Backend Portfolio</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
