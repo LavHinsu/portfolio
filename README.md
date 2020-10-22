@@ -31,7 +31,7 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 serves app locally for production testing
 
-### `npm -i -g netlify-cli`
+### `npm -g install netlify-cli`
 
 installs netlify cli
 

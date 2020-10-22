@@ -1,5 +1,5 @@
 import React from 'react';
-import {  Card, Badge } from 'react-bootstrap';
+import { Card, Badge } from 'react-bootstrap';
 import { BoxArrowUpRight } from 'react-bootstrap-icons';
 const CardComponent = (props) => {
     var name = props.name
@@ -18,14 +18,14 @@ const CardComponent = (props) => {
                     <Card.Subtitle className="mb-2 text-muted">
                         <Badge pill variant="primary">
                             {technology}
-                                </Badge>{' '}</Card.Subtitle>
+                        </Badge>{' '}</Card.Subtitle>
                     <Card.Text>
                         {description}
-                             </Card.Text>
+                    </Card.Text>
                     <footer className="footer-right">
                         <Card.Link href={url} target="_blank">
                             View On Github
-                            <BoxArrowUpRight height="2em"/>
+                            <BoxArrowUpRight height="2em" />
                         </Card.Link>
 
                     </footer>
